@@ -57,7 +57,7 @@ body {
     &.diamond:before,
     &.diamond:after {
         content: '\2666'; /* diamantes */
-        color: red;
+        color: orangered;
     }
 
     /* Número de la carta centrado y grande */
