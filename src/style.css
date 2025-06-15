@@ -1,0 +1,91 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+body {
+    background: green;
+    box-sizing: border-box;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 450px;
+    background: white;
+    margin: 40px auto;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+
+    &:before {
+        content: '\2660';
+        position: absolute;
+        top: 5px;
+        left: 20px;
+        font-size: 100px;
+        /* Tamaño intermedio */
+    }
+
+    &:after {
+        content: '\2660';
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 100px;
+        /* Tamaño intermedio */
+    }
+
+    &.spade:before,
+    &.spade:after {
+        content: '\2660';
+    }
+
+    &.club:before,
+    &.club:after {
+        content: '\2663';
+    }
+
+    &.heart:before,
+    &.heart:after {
+        content: '\2665';
+        color: red;
+    }
+
+    &.diamond:before,
+    &.diamond:after {
+        content: '\2666';
+        color: red;
+    }
+
+    .numero {
+        font-size: 300px;
+        font-weight: bold;
+        line-height: 1;
+    }
+
+    .corner {
+        position: absolute;
+        font-size: 80px;
+        pointer-events: none;
+    }
+
+    .top-right {
+        top: 20px;
+        right: 20px;
+    }
+
+    .bottom-left {
+        bottom: 20px;
+        left: 20px;
+    }
+
+    .numero {
+        font-size: 120px;
+        font-weight: bold;
+        line-height: 1;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+}
