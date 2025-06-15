@@ -5,26 +5,24 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="./assets/img/4geeks.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Importo mis estilos y Bootstrap -->
   <link rel="stylesheet" href="style.css" />
-  <title>Hello Rigo with Vanilla.js</title>
-
-  <!-- Fontawesome is our recomended library for icons -->
+  <title>Carta Aleatoria - Sasha</title>
+  <!-- Fontawesome para iconos (por si quiero usar después) -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+    crossorigin="anonymous" />
 </head>
 
 <body>
-  <!-- Write your HTML code here, you can delete everything withing the body tags -->
-
-  <h1></h1>
+  <!-- Aquí irá la carta en el centro -->
   <div class="container-fluid text-center">
+    <!-- Por defecto, empiezo con picas para que el CSS funcione hasta que JS cambie la clase -->
     <div class="card spade">
+      <!-- El número lo relleno con JS -->
       <span class="numero"></span>
     </div>
   </div>
-
-  <!-- Do not delete this script tag, this is what connects your HTML with the Javascript code -->
+  <!-- El JS se encarga de poner número y palo aleatorios -->
   <script type="module" src="/app.js"></script>
 </body>
-
 </html>

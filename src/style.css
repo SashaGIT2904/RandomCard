@@ -1,10 +1,12 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
+/* Fondo verde de mesa de póker */
 body {
     background: green;
     box-sizing: border-box;
 }
 
+/* La carta principal: centrada y con bordes redondeados */
 .card {
     display: flex;
     align-items: center;
@@ -17,68 +19,48 @@ body {
     border: 1px solid black;
     position: relative;
 
+    /* Símbolo del palo arriba a la izquierda */
     &:before {
-        content: '\2660';
+        content: '\2660'; /* por defecto, picas */
         position: absolute;
         top: 5px;
         left: 20px;
         font-size: 100px;
-        /* Tamaño intermedio */
     }
 
+    /* Símbolo del palo abajo a la derecha */
     &:after {
         content: '\2660';
         position: absolute;
         bottom: 20px;
         right: 20px;
         font-size: 100px;
-        /* Tamaño intermedio */
     }
 
+    /* Cambia el símbolo según la clase (diamond, club, heart, spade) */
     &.spade:before,
     &.spade:after {
-        content: '\2660';
+        content: '\2660'; /* picas */
     }
 
     &.club:before,
     &.club:after {
-        content: '\2663';
+        content: '\2663'; /* trébol */
     }
 
     &.heart:before,
     &.heart:after {
-        content: '\2665';
+        content: '\2665'; /* corazones */
         color: red;
     }
 
     &.diamond:before,
     &.diamond:after {
-        content: '\2666';
+        content: '\2666'; /* diamantes */
         color: red;
     }
 
-    .numero {
-        font-size: 300px;
-        font-weight: bold;
-        line-height: 1;
-    }
-
-    .corner {
-        position: absolute;
-        font-size: 80px;
-        pointer-events: none;
-    }
-
-    .top-right {
-        top: 20px;
-        right: 20px;
-    }
-
-    .bottom-left {
-        bottom: 20px;
-        left: 20px;
-    }
-
+    /* Número de la carta centrado y grande */
     .numero {
         font-size: 120px;
         font-weight: bold;
@@ -87,5 +69,4 @@ body {
         width: 100%;
         text-align: center;
     }
-
 }
